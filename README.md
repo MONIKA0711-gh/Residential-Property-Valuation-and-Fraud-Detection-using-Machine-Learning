@@ -1,102 +1,108 @@
-# 🏠 Bengaluru House Price Analytics using Machine Learning
+# 🏠 AI-Powered House Price Prediction and Fraud Detection System
 
-> **An end-to-end Machine Learning project that predicts residential property prices in Bengaluru using a Linear Regression model implemented completely from scratch with NumPy.**
+> **An end-to-end Machine Learning system that predicts fair residential property prices and detects suspicious property listings using Linear Regression and Logistic Regression implemented completely from scratch with NumPy.**
 
-This project demonstrates the complete machine learning workflow—from raw data preprocessing and feature engineering to model training, evaluation, and accurate house price prediction—without relying on machine learning libraries for the learning algorithm.
+This project goes beyond traditional house price prediction by combining **property valuation**, **fraud probability estimation**, **risk assessment**, and an **Explainable Fraud Engine** into a single intelligent property analysis system.
 
-# 🎯 Project Objective
+---
 
-Real estate prices depend on several factors such as location, total area, number of bedrooms, and amenities. Determining a fair market price manually is difficult due to the large number of influencing factors.
+# 📌 Project Overview
 
-The objective of this project is to build a machine learning system capable of estimating house prices accurately by learning patterns from historical housing data.
+Buying a property is one of the biggest financial decisions an individual makes. However, buyers often rely solely on the seller's quoted price without knowing whether it truly reflects the property's market value.
 
-The project focuses on understanding the mathematics behind Linear Regression by implementing Gradient Descent from scratch using NumPy instead of using Scikit-learn's built-in Linear Regression.
+This project addresses that challenge by developing an AI-powered decision support system that:
+
+- Predicts the fair market value of a property.
+- Identifies suspicious property pricing.
+- Estimates fraud probability.
+- Calculates a risk score and assigns a risk level.
+- Explains why a property is considered suspicious.
+- Suggests a fair market price range.
+
+---
+
+# 🎯 Project Objectives
+
+- Predict accurate house prices using Linear Regression implemented from scratch.
+- Detect suspicious property pricing using Logistic Regression implemented from scratch.
+- Build a custom fraud detection dataset from an existing house price dataset.
+- Generate explainable fraud analysis for better decision-making.
+- Assist buyers in evaluating whether a property's quoted price is reasonable.
+
+---
 
 # 🌍 Real-World Applications
 
-This solution can be useful for:
+This project can be used by:
 
-* 🏠 Home buyers to estimate fair property prices
-* 🏢 Real estate companies for automated valuation
-* 💰 Banks during home loan approval
-* 📈 Property investment analysis
-* 🏗️ Real estate websites to recommend competitive pricing
-* 📊 Market trend analysis and decision making
+- 🏠 Home Buyers for fair price estimation before purchasing.
+- 🏢 Real Estate Companies for automated property valuation.
+- 🏦 Banks during home loan property valuation.
+- 📈 Property Investors to compare investment opportunities.
+- 🌐 Real Estate Platforms for intelligent pricing insights.
+- 📊 Market Analysts for studying pricing patterns.
 
-# 📌 Project Highlights
+---
 
-✔ Complete data preprocessing pipeline
+# 📂 Dataset
 
-✔ Feature engineering for improved prediction accuracy
+**Dataset:** Bengaluru House Price Dataset
 
-✔ Linear Regression implemented from scratch using NumPy
+The original dataset contains over **13,000 residential property listings**.
 
-✔ Gradient Descent optimization
+### Original Features
 
-✔ Mean Squared Error (MSE) loss function
+- Area Type
+- Availability
+- Location
+- Size
+- Total Square Feet
+- Bathrooms
+- Balconies
+- Price
 
-✔ Model evaluation using R² Score and RMSE
+> **Note:** The original dataset does **not** contain fraud labels or suspicious property information.
 
-✔ Data visualization and exploratory analysis
-
-✔ Clean, modular, and well-documented code
-
-# 📂 Project Structure
-
-```text
-Bengaluru-House-Price-Analytics/
-
-│
-├── Bengaluru_House_Data.csv
-├── Preprocessing_EDA.ipynb
-├── Linear_Reg_Logistic_Reg.ipynb
-├── requirements.txt
-└── README.md
-```
-
-# 📊 Dataset Overview
-
-The project uses the **Bengaluru House Price Dataset** containing over **13,000 residential property listings**.
-
-### Features
-
-| Feature      | Description                        |
-| ------------ | ---------------------------------- |
-| area_type    | Property type                      |
-| availability | Ready-to-move or possession status |
-| location     | House location                     |
-| size         | Number of bedrooms                 |
-| total_sqft   | Total area in square feet          |
-| bath         | Number of bathrooms                |
-| balcony      | Number of balconies                |
-| price        | Target variable (Price in Lakhs)   |
+---
 
 # ⚙ Data Preprocessing
 
-The raw dataset contains missing values, inconsistent formats, and outliers.
-
 The preprocessing pipeline includes:
 
-* Removing unnecessary columns
-* Handling missing values
-* Extracting BHK values
-* Converting area ranges into numeric values
-* Removing duplicate records
-* Detecting and removing outliers
-* Standardizing numerical features
+- Removing unnecessary columns
+- Handling missing values
+- Extracting BHK values
+- Converting area ranges into numeric values
+- Removing duplicate records
+- Handling rare locations
+- Detecting and removing outliers
+- Standardizing numerical features
 
-The resulting dataset is cleaner, more consistent, and better suited for machine learning.
+---
 
 # 🧠 Feature Engineering
 
-To improve predictive performance, several meaningful features were created.
+To improve prediction performance, additional meaningful features were engineered.
 
-* Price per Square Foot
-* Average Price by Location
-* Location Premium Index
-* Square Feet per Bedroom (BHK)
+### Price Prediction Features
 
-These engineered features enable the model to capture relationships that are not directly available in the original dataset.
+- Price per Square Foot
+- Square Feet per BHK
+- Location Average Price
+- Location Premium Index
+
+### Fraud Detection Features
+
+- Quoted Price
+- Inflation Ratio
+- Difference Percentage
+- Area Value Index
+- Price Rank
+- Risk Score
+
+These engineered features were used to create a custom fraud detection dataset and improve model performance.
+
+---
 
 # 🤖 Machine Learning Pipeline
 
@@ -107,130 +113,241 @@ Raw Dataset
 Data Cleaning
       │
       ▼
-Missing Value Handling
-      │
-      ▼
 Feature Engineering
       │
       ▼
-Outlier Removal
+Exploratory Data Analysis
       │
       ▼
-Feature Standardization
+Linear Regression (From Scratch)
       │
       ▼
-Train-Test Split
+Predicted Market Price
       │
       ▼
-Linear Regression (NumPy)
+Custom Fraud Dataset Generation
       │
       ▼
-Gradient Descent Optimization
+Fraud Feature Engineering
       │
       ▼
-Model Evaluation
+Logistic Regression (From Scratch)
       │
       ▼
-House Price Prediction
+Fraud Probability Prediction
+      │
+      ▼
+Risk Score Generation
+      │
+      ▼
+Explainable Fraud Engine
+      │
+      ▼
+Final Property Analysis Report
 ```
 
-# 📈 Model Implementation
+---
 
-The Linear Regression model was developed **entirely from scratch** using **NumPy**, providing a deeper understanding of the underlying mathematical concepts.
+# 🧮 Model 1 — Linear Regression (From Scratch)
+
+Implemented completely from scratch using **NumPy**.
 
 ### Implemented Components
 
-* Cost Function (Mean Squared Error)
-* Gradient Descent
-* Weight Initialization
-* Bias Optimization
-* Feature Normalization
-* Prediction Function
-* Model Evaluation
-  
+- Weight Initialization
+- Bias Initialization
+- Feature Standardization
+- Mean Squared Error (MSE)
+- Gradient Descent
+- Weight Updates
+- Prediction Function
+
+### Purpose
+
+Predict the fair market value of a property based on:
+
+- Location
+- Total Square Feet
+- BHK
+- Bathrooms
+
+---
+
+# 🚨 Custom Fraud Detection Pipeline
+
+Since the original dataset did not contain fraud labels, a custom fraud detection pipeline was designed.
+
+### Steps
+
+- Generate seller quoted prices
+- Compare quoted price with predicted market price
+- Generate fraud labels using rule-based logic
+- Engineer fraud-related features
+- Train Logistic Regression model
+
+This transformed a standard regression dataset into a supervised fraud detection dataset.
+
+---
+
+# 🧠 Model 2 — Logistic Regression (From Scratch)
+
+Implemented completely from scratch using **NumPy**.
+
+### Implemented Components
+
+- Sigmoid Function
+- Binary Cross Entropy Loss
+- Gradient Descent
+- Weight Updates
+- Probability Prediction
+- Binary Classification
+
+### Purpose
+
+Estimate the probability that a property's quoted price is suspicious.
+
+---
+
 # 📊 Model Performance
 
-| Metric           | Result               |
-| ---------------- | -------------------- |
-| Algorithm        | Linear Regression    |
-| Implementation   | NumPy (From Scratch) |
-| Optimizer        | Gradient Descent     |
-| Loss Function    | Mean Squared Error   |
-| Training Epochs  | 5000                 |
-| Learning Rate    | 0.001                |
-| Train/Test Split | 80/20                |
-| R² Score         | ~0.70+               |
-| RMSE             | ~₹60–90 Lakhs        |
+## Linear Regression
 
-# 📉 Exploratory Data Analysis
+| Metric | Value |
+|---------|-------|
+| Algorithm | Linear Regression |
+| Implementation | NumPy (From Scratch) |
+| Optimizer | Gradient Descent |
+| Loss Function | Mean Squared Error |
+| Epochs | 5000 |
+| Learning Rate | 0.001 |
 
-Several visualizations were created to understand the dataset, including:
+---
 
-* Price Distribution
-* Correlation Heatmap
-* BHK Distribution
-* Location-wise Price Analysis
-* Price vs Total Square Feet
-* Bathroom vs Price
-* Outlier Detection
-* Feature Correlation Analysis
+## Logistic Regression
 
-These insights helped identify important trends and improve model performance.
+| Metric | Value |
+|---------|-------|
+| Algorithm | Logistic Regression |
+| Implementation | NumPy (From Scratch) |
+| Classification Accuracy | **97.74%** |
+| Precision | **(Add Your Value)** |
+| Recall | **(Add Your Value)** |
+| F1-Score | **(Add Your Value)** |
 
-# 🛠 Technologies Used
+---
 
-| Category            | Technologies       |
-| ------------------- | ------------------ |
-| Programming         | Python             |
-| Numerical Computing | NumPy              |
-| Data Analysis       | Pandas             |
-| Visualization       | Matplotlib, Plotly |
-| Notebook            | Jupyter Notebook   |
+# 🔍 Explainable Fraud Engine
 
-# 🚀 Key Learning Outcomes
+Instead of simply classifying a property as suspicious, the system provides human-readable explanations.
 
-Through this project, I gained practical experience in:
+Example outputs:
 
-* Machine Learning fundamentals
-* Linear Regression mathematics
-* Gradient Descent optimization
-* Feature Engineering
-* Data Cleaning
-* Exploratory Data Analysis (EDA)
-* Model Evaluation
-* Building machine learning models without external ML libraries
+- Property appears moderately overpriced.
+- Large positive deviation from predicted market price.
+- Property price is close to estimated market value.
+- Property is significantly below estimated market value (possible bargain).
 
-# 🔮 Future Enhancements
+---
 
-Potential improvements include:
+# ⚠ Risk Assessment Module
 
-* Implementing Ridge and Lasso Regression
-* Comparing multiple regression algorithms
-* Hyperparameter optimization
-* Advanced feature engineering
-* Cross-validation
-* Model deployment using a web application
-* Support for multiple city datasets
+The project also generates:
 
-# 💡 Why This Project?
+- Fraud Probability
+- Risk Score
+- Risk Level
 
-Most house price prediction projects rely entirely on Scikit-learn.
+Risk Levels:
 
-This project intentionally builds the Linear Regression algorithm from scratch to demonstrate a solid understanding of:
+- Low
+- Moderate
+- High
+- Critical
 
-* The mathematics behind machine learning
-* Optimization using Gradient Descent
-* Model training without high-level ML libraries
-* End-to-end machine learning workflow
+---
 
-It highlights not just the ability to use machine learning tools, but also the ability to understand and implement the underlying algorithms.
+# 📋 Final Property Analysis Report
+
+The final system generates:
+
+- Predicted Market Price
+- Quoted Price
+- Price Difference
+- Fraud Probability
+- Risk Score
+- Risk Level
+- Explainable Reasons
+- Suggested Fair Price Range
+
+---
+
+# 💻 Technologies Used
+
+| Category | Technologies |
+|----------|--------------|
+| Programming | Python |
+| Numerical Computing | NumPy |
+| Data Processing | Pandas |
+| Visualization | Matplotlib |
+| Notebook | Google Colab |
+| Machine Learning | Linear Regression, Logistic Regression |
+
+---
+
+# 📚 Key Learning Outcomes
+
+Through this project I gained practical experience in:
+
+- Machine Learning Fundamentals
+- Linear Regression Mathematics
+- Logistic Regression Mathematics
+- Gradient Descent Optimization
+- Feature Engineering
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- Custom Fraud Dataset Generation
+- Explainable AI
+- Model Evaluation
+
+---
+
+# 🚀 Future Enhancements
+
+- Streamlit Web Application
+- Interactive Dashboard
+- Real-Time Property API Integration
+- Multi-city Property Analysis
+- Advanced Explainable AI
+- Deep Learning Models
+- Cloud Deployment
+
+---
+
+# ⭐ Why This Project?
+
+Most house price prediction projects stop after predicting the property's price.
+
+This project extends beyond traditional prediction by:
+
+- Implementing both Linear Regression and Logistic Regression completely from scratch.
+- Designing a custom fraud detection pipeline.
+- Engineering fraud-related features.
+- Providing fraud probability estimation.
+- Generating explainable fraud analysis.
+- Producing a complete property analysis report.
+
+It demonstrates not only machine learning implementation but also problem-solving, feature engineering, explainability, and end-to-end system design.
+
+---
 
 # 🤝 Contributing
 
 Contributions, suggestions, and improvements are welcome.
 
-If you have ideas to enhance the project, feel free to fork the repository, submit issues, or create pull requests.
+Feel free to fork this repository, open issues, or submit pull requests.
 
-# ⭐ If You Found This Project Helpful
+---
 
-If you enjoyed exploring this project or found it useful, consider giving it a ⭐ on GitHub. It motivates me to continue building and sharing more machine learning projects.
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
