@@ -1,4 +1,4 @@
-# 🏠 AI-Powered House Price Prediction and Fraud Detection System
+# 🏠 AI-Powered Residential Property Valuation and Fraud Detection System
 
 > **An end-to-end Machine Learning system that predicts fair residential property prices and detects suspicious property listings using Linear Regression and Logistic Regression implemented completely from scratch with NumPy.**
 
